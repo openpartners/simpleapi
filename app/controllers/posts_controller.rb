@@ -3,8 +3,13 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
-
+    @posts = Post.all.map do |post|
+      {
+        id: post.id,
+        title: post.title,
+        body: post.body
+      }
+    end
     render json: @posts
   end
 

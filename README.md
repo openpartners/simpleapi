@@ -12,9 +12,12 @@ Things you may want to cover:
 * Configuration
 
 rails new . --api -d postgresql
+rails generate scaffold Post title:string body:text
 
 
 * Database creation
+
+rails db:create
 
 * Database initialization
 
